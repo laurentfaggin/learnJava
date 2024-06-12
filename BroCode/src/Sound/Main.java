@@ -13,11 +13,30 @@ public class Main {
 		File file = new File("/home/laurent/git/repository/BroCode/src/Sound/Skating_on_the_uppers.wav");
 		AudioInputStream audiostream = AudioSystem.getAudioInputStream(file);
 		Clip clip = AudioSystem.getClip();
-		clip.open(audiostream);
+		clip.open(audiostream);		
+		String response = "";
 		
-		clip.start();
+		while(!response.equals("Q")) {
+			System.out.println("P = play, S = stop, R = reset, Q = Quit");
+			System.out.println("Enter your choice");
+			
+			response = scanner.next();
+			response = response.toUpperCase();
+			
+			switch(response) {
+				case ("P"): clip.start();
+				break;
+				case ("S"): clip.stop();
+				break;
+				case ("R"): clip.setMicrosecondPosition(0);
+				break;
+				case ("Q"): clip.close();
+				break;
+				default: System.out.println("Not a valid response");
+			}
+		}
+		System.out.println("Byeeeeee!");
 		
-		String response = scanner.next();
 	}
 
 }
