@@ -1,4 +1,4 @@
-package mainPackage.override;
+package override;
 
 public class Animal {
 	void speak () {
