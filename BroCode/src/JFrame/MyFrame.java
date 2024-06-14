@@ -13,26 +13,26 @@ import javax.swing.border.Border;
 public class MyFrame extends JFrame {
 	
 	MyFrame(){
-		this.setTitle("JFrame title goes here"); // set title of a this
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // exit out of application but there are others options
-		this.setResizable(true);  // prevent this for being resized
-		//this.setSize(420,420); // set the x and y dimensions of a this
+		this.setTitle("JFrame title goes here"); 							// set title of a this
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 				// exit out of application but there are others options
+		this.setResizable(true);  											// prevent this for being resized
+		this.setSize(420,420); 												// set the x and y dimensions of a this
 		
 		Border border = BorderFactory.createLineBorder(Color.green,3);
 		
 		JLabel label = new JLabel(); 
 		label.setText("Yo boy!");    
-		label.setHorizontalTextPosition(JLabel.CENTER);     // set text LEFT,CENTER,RIGHT of imageIcon
-		label.setVerticalTextPosition(JLabel.TOP);          // set text TOP, CENTER, BOTTOM of imageicon
+		label.setHorizontalTextPosition(JLabel.CENTER);     				// set text LEFT,CENTER,RIGHT of imageIcon
+		label.setVerticalTextPosition(JLabel.TOP);          				// set text TOP, CENTER, BOTTOM of imageicon
 		label.setForeground(new Color(0x00FF00));           
 		label.setFont(new Font("MV Boli", Font.PLAIN, 20));
-		label.setIconTextGap(50);    // set gap of text to image
-		label.setBackground(Color.black);   // set BG color
-		label.setOpaque(true);     // display BG color
+		label.setIconTextGap(50);    										// set gap of text to image
+		label.setBackground(Color.black);   								// set BG color
+		label.setOpaque(true);     											// display BG color
 		label.setBorder(border);
 		label.setVerticalAlignment(JLabel.CENTER);
 		label.setHorizontalAlignment(JLabel.CENTER);
-		// label.setBounds(100, 100, 250, 250);        // set x,y position within frame as well as dimensions
+		// label.setBounds(100, 100, 250, 250);        						// set x,y position within frame as well as dimensions
 
 		// Utilisation du chemin absolu																				// 
 		String imagePath = "/home/laurent/git/repository/BroCode/src/JFrame/logo-chocolatine.png";					//
